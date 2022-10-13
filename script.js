@@ -49,5 +49,10 @@ function showMovie(data){
 
 
 search.addEventListener('change', (e) => {
-    e.target.value == "" ? getMovie(url) : getSearch(e.target.value) 
+    if (e.target.value == "") {
+        getMovie(API_URL);
+    } else {
+        getSearch(e.target.value)
+    }
+//     e.target.value == "" ? getMovie(url) : getSearch(e.target.value) 
 })
